@@ -1,6 +1,14 @@
+const sum = (fromN, toN) => {
+  if (fromN === toN) {
+    return toN;
+  }
 
-function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
-}
+  return fromN + sum(fromN + 1,toN);
+};
 
 module.exports = sum;
+
+// sum(3, 7)
+// 3, 4, 5, 6, 7 === 25;
+// 3 + sum(4, 7)
+// etc.?
